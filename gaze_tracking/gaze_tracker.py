@@ -42,7 +42,6 @@ class GazeTracker(object):
         """Detects the face and initialize Eye objects"""
         frame = cv2.flip(self.frame, 1)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        print('faces:', self._faces)
 
         try:
             face = list(map(int, self._faces[0]))
